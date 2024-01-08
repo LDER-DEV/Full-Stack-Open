@@ -46,13 +46,6 @@ const StatisticsLine = ({text, value}) =>{
   }
 
 const Total =({count}) =>{
-  if(count === 0){
-    return(
-      <div>
-        <h3>No feedback given</h3>
-      </div>
-    )
-  }
   return(
     <tr>
       <td>all {count}</td>
@@ -62,28 +55,14 @@ const Total =({count}) =>{
 
 const Average = ({good,bad,total}) =>{
   console.log((good+bad))
-  if(total === 0){
-    return(
-      <div>
-
-      </div>
-    )
-  }
   return(
     <tr>
-  <td>average {3 / (good+bad)}</td>
+  <td>average {(good+bad) / 2}</td>
     </tr>
   )
 }
 
 const Positive = ({positive, total}) =>{
-  if(total === 0){
-    return(
-      <div>
-
-      </div>
-    )
-  }
   return(
     <tr>
       <td>Positive {positive / total *100} %</td>
