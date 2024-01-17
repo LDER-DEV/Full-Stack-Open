@@ -6,13 +6,13 @@ const Course = ({ course }) => {
       <div>
         {course.map((c) => (
           <div key={c.id}>
-            <h1>{c.name}</h1>
+            <h2>{c.name}</h2>
             <ul>
               {c.parts.map((part) => (
                 <li key={part.id}>{part.name}</li>
               ))}
             </ul>
-            <p>total of {c.parts.reduce((a, b) => a + b.exercises, 0)} exercises</p>
+            <h3> of {c.parts.reduce((a, b) => a + b.exercises, 0)} exercises</h3>
           </div>
         ))}
       </div>
